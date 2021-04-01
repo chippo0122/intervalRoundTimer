@@ -1,5 +1,3 @@
-//暫停後回合多算一次問題待解決
-
 const time = document.querySelectorAll('.time-select');
 const timeSet = document.querySelector('.time-set');
 const timeControl = document.querySelector('.time-control');
