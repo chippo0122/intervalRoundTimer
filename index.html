@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Down Tik Tok</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="all.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="time-op">
+            <div class="clock">
+                <p class="time-left text-center">
+                    00:00
+                </p>
+                <p class="round-left"></p>
+                <p class="status">Seting</p>
+            </div>
+        </div>
+        <div class="time-control d-none">
+            <a id="redo" href="#" class="btn-control">
+                <i data-target="#modalRestart" class="fas fa-redo-alt click"></i>
+            </a>
+            <a id="go" href="#" class="btn-control">
+                <i id="play" class="fas fa-play-circle click"></i>
+                <i id="pause" class="fas fa-pause-circle d-none click"></i>
+            </a>
+            <a id="stop" href="#" class="btn-control">
+                <i data-target="#modalStop" class="fas fa-stop-circle click"></i>
+            </a>
+        </div>
+        <div class="time-set">
+            <div>
+                <div class="set">
+                    <label class="text-center" for="#workTime">Set Work Time</label>
+                    <div id="workTime" class="set-form">
+                        <select class="time-select" id="workMin">
+                            <option value="0">00</option>
+                        </select>
+                        <p class="divide">:</p>
+                        <select class="time-select" id="workSec">
+                            <option value="0">00</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="set">
+                    <label class="text-center" for="#restTime">Set Rest Time</label>
+                    <div id="restTime" class="set-form">
+                        <select class="time-select" id="restMin">
+                            <option value="0">00</option>
+                        </select>
+                        <p class="divide">:</p>
+                        <select class="time-select" id="restSec">
+                            <option value="0">00</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="set">
+                <label class="text-center" for="#roundSet">Round</label>
+                <div id="roundSet" class="set-form">
+                    <select id="round">
+                        <option value="1">01</option>
+                    </select>
+                </div>
+            </div>
+            <div class="send">
+                <a href="#" class="btn btn-clear click">CLEAR</a>
+                <a href="#" class="btn btn-send click">START</a>
+            </div>
+        </div>
+    </div>
+    <div id="modalStop" class="modal d-none">
+        <div class="modal-content">
+            <p>Comfirm to Stop?</p>
+            <div class="modal-footer">
+                <a href="#" data-dismiss="dismiss" class="btn modalST-dismiss click">Cancel</a>
+                <a href="#" class="btn btn-stop click">STOP</a>
+            </div>
+        </div>
+    </div>
+    <div id="modalRestart" class="modal d-none">
+        <div class="modal-content">
+            <p>Restart counting?</p>
+            <div class="modal-footer">
+                <a href="#" data-dismiss="dismiss" class="btn modalRS-dismiss click">Cancel</a>
+                <a href="#" class="btn btn-restart click">RESTART</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/7fc9b57457.js" crossorigin="anonymous"></script>
+    <script src="all.js"></script>
+</body>
+
+</html>
